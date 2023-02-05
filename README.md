@@ -1,6 +1,14 @@
-# while
+# [go back to Overview](https://github.com/c4arl0s)
 
-# Arithmetic
+# [while - Content](https://github.com/c4arl0s/while#go-back-to-overview)
+
+1. [x] [1. Arithmetic](https://github.com/c4arl0s/while#1-Arithmetic)
+2. [x] [2. filesystem-related conditions](https://github.com/c4arl0s/while#2-filesystem-related-conditions)
+3. [x] [3. or for reading input](https://github.com/c4arl0s/while#3-or-for-reading-input)
+
+# [while](https://github.com/c4arl0s/while#while---content)
+
+# 1. [Arithmetic](https://github.com/c4arl0s/while#while---content)
 
 ```bash
 while (( COUNT < MAX ))
@@ -10,7 +18,7 @@ do
 done
 ```
 
-# filesystem-related conditions:
+# 2. [filesystem-related conditions](https://github.com/c4arl0s/while#while---content)
 
 ```bash
 while [ -z "$LOCKFILE" ]
@@ -19,7 +27,7 @@ do
 done
 ```
 
-# or for reading input:
+# 3. [or for reading input](https://github.com/c4arl0s/while#while---content)
 
 ```bash
 while read lineoftext
