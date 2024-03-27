@@ -6,6 +6,7 @@
 2. [x] [2. filesystem-related conditions](https://github.com/c4arl0s/while#2-filesystem-related-conditions)
 3. [x] [3. or for reading input](https://github.com/c4arl0s/while#3-or-for-reading-input)
 4. [x] [4. Elegant endless loop](https://github.com/c4arl0s/while#4-elegant-endless-loop)
+5. [x] [5. Modify variable inside a while loop](https://github.com/c4arl0s/while#4-elegant-endless-loop)
 
 # [while](https://github.com/c4arl0s/while#while---content)
 
@@ -30,6 +31,8 @@ done
 
 # 3. [or for reading input](https://github.com/c4arl0s/while#while---content)
 
+You can pass standard output to these lines:
+
 ```bash
 while read lineoftext
 do
@@ -47,3 +50,29 @@ do
     echo "Do something"
 done
 ```
+
+# 5. [Modify a variable inside a while loop]()
+
+```bash
+#/bin/bash
+
+# Inside while loop will not be modified variable movie
+echo "First time"
+movie=""
+echo ${movie}
+cat movies.txt | cut -d "." -f 2 | while read movie_name; do
+  if echo "${movie_name}" | grep "Kid"; then
+    movie="${movie_name}"
+  fi
+done
+echo "${movie}"
+
+echo "Second time"
+while IFS= read -r movie_name; do
+  if echo "${movie_name}" | grep "Kid"; then
+    movie="${movie_name}"
+  fi
+done < movies.txt
+
+```
+
